@@ -1,0 +1,53 @@
+html {
+   box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+h1{
+	color: white;
+	margin-left: 20px;
+}
+body{
+	background-color: black;
+}
+.basebox{
+	background-color: white;
+	height: 372.5px;
+	width: 600px;
+	border: 1px solid black;
+	margin-left: 20px;
+    position:relative;  
+}
+.bluebox{
+	background-color: blue;
+	height: 200px;
+	width: 250px;
+	position: absolute;
+}
+.redstripe{
+	background-color: red;
+	height: 28.5px;
+	margin-bottom: 28.5px;
+}
+.basebox2{
+	background-color: white;
+	height: 372.5px;
+	width: 600px;
+	border: 1px solid black;
+	margin-left: 20px;
+	float: right;
+    position:relative;
+    margin-top:20px; 
+    margin-bottom: 10px; 
+}
+.redcircle{
+	background-color: red;
+	height: 200px;
+	width: 200px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 80px;
+	border-radius: 100px;
+	border:1px solid black;
+}

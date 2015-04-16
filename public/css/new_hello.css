@@ -1,0 +1,40 @@
+h1 {
+  color: darkcyan;
+  text-decoration: underline;	
+}
+h2{
+  color: darksalmon;
+  text-decoration: underline;	
+}
+body {
+  background-image: url(../img/upfeathers.png); 
+  font-family: helvetica, arial, serif;	
+  color:darkgoldenrod;
+  margin-left: 10px;
+}
+ol{
+  list-style: lower-alpha;	
+}
+ul{
+  list-style: square;	
+}
+tr{
+  color: gray;	
+}
+a:link {
+   color: purple;	
+}
+a:visited {
+	color: red;
+}
+a:hover {
+	color: green;
+}
+a{
+  margin-top: 10px;
+}
+.picture{
+  height: 350px;
+  width: 400px;
+  border: 20px solid gray;
+}
