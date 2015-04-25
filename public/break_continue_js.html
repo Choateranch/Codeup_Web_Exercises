@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Break Continue</title>
+</head>
+<body>
+   <script>
+
+   while(true){
+    var random = Math.floor((Math.random()*50)+1);
+
+    if (random % 2 != 0){
+      console.log('Random stopping point is: ' + random);
+       break;
+    } 
+    console.log('Random stopping point is: ' + random);
+    
+    for (var i = 1; i < 50; i += 2) {
+
+    	console.log('here is an odd number: ' + i)
+    }
+  } 
+   </script>
+</body>
+</html>
