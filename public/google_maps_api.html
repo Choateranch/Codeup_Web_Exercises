@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Google API </title>
+  <style type="text/css">
+    #map-canvas {
+     width: 900px;
+     height: 600px;
+   }
+
+ </style> 
+</head>
+<body>
+	<!-- Contain Map -->
+  <div id="map-canvas"></div>
+
+  <!-- Load the Google Maps API -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCg8K4a3Dnk5EcUMdrpbuDr-UAxdh7lCqE"></script>
+
+  <!-- Centering Map & Setting Zoom -->
+  <script type="text/javascript">
+
+    var mapOptions = {
+      zoom: 18,
+      center: { lat: 29.442705, lng: -98.478978 }
+    };
+    // Show Map
+    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+
+    // Marker/Info for Sam's Burger Joint
+    var sams = { lat: 29.443536, lng: -98.477374 };
+    
+    var marker = new google.maps.Marker({
+      "position": sams,
+      "map": map
+
+    });  
+
+    var infowindow = new google.maps.InfoWindow({
+        content: 'Burgers and Beers!'  
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(map,marker);
+    });
+
+    //google.maps.event.addDomListener(window, 'load', initialize);
+
+    infowindow.close(map,marker);
+
+    // Marker/Info for Boiler House
+    var boilerHouse = { lat: 29.442794, lng: -98.480566};
+
+    marker = new google.maps.Marker({
+      "position": boilerHouse,
+      "map": map
+    });
+
+     infowindow = new google.maps.InfoWindow({
+        content: 'Because STEAK!'  
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(map,marker);
+    });
+
+    //google.maps.event.addDomListener(window, 'load', initialize);
+
+    infowindow.close(map,marker);
+
+    // Marker/Info for Bakery Lorraine
+    var bakeryLorraine = { lat: 29.442112, lng: -98.480041};
+
+    marker = new google.maps.Marker({
+      "position": bakeryLorraine,
+      "map": map
+    });
+
+    infowindow = new google.maps.InfoWindow({
+        content: 'Part of a Balanced Breakfast!'  
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(map,marker);
+    });
+
+    infowindow.close(map,marker);
+
+    // Marker/Info for Local Coffee
+    var localCoffee = { lat: 29.441916, lng: -98.479424};
+
+    marker = new google.maps.Marker({
+      "position": localCoffee,
+      "map": map
+    });
+
+    infowindow = new google.maps.InfoWindow({
+        content: 'Java is Life!'  
+    });
+    google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(map,marker);
+    });
+
+    infowindow.close(map,marker);
+
+    // Marker/Info for Bike World
+    var bikeWorld = { lat: 29.443269, lng: -98.478643};
+
+    marker = new google.maps.Marker({
+      "position": bikeWorld,
+      "map": map
+    });
+
+    infowindow = new google.maps.InfoWindow({
+        content: 'I Work here, and We Have Snacks!'  
+    });
+    //google.maps.event.addListener(marker, 'click', function() {
+    //infowindow.open(map,marker);
+    //});
+
+    infowindow.close(map,marker);
+    
+    //google.maps.event.addDomListener(window, 'load', initialize);
+
+   </script>
+</body>  
