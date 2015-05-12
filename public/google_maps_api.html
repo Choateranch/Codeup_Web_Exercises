@@ -7,6 +7,9 @@
      width: 900px;
      height: 600px;
    }
+   body{
+    background: grey;
+   }
 
  </style> 
 </head>
@@ -14,7 +17,6 @@
 	<!-- Contain Map -->
   <div id="map-canvas"></div>
 
-  <!-- Load the Google Maps API -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCg8K4a3Dnk5EcUMdrpbuDr-UAxdh7lCqE"></script>
 
   <!-- Centering Map & Setting Zoom -->
@@ -27,101 +29,102 @@
     // Show Map
     var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
-
-    // Marker/Info for Sam's Burger Joint
+    // Marker/Infowindow for Sam's Burger Joint
     var sams = { lat: 29.443536, lng: -98.477374 };
-    
-    var marker = new google.maps.Marker({
+    var image1 = 'img/restaurant.png';
+    var image2 = 'img/bike_rising.png';
+    var markerSams = new google.maps.Marker({
       "position": sams,
-      "map": map
+      "map": map,
+      "icon": image1
 
     });  
 
-    var infowindow = new google.maps.InfoWindow({
+    var infowindow1 = new google.maps.InfoWindow({
         content: 'Burgers and Beers!'  
     });
 
-    google.maps.event.addListener(marker, 'click', function() {
-    infowindow.open(map,marker);
+    // Click Event for Sams Window
+    google.maps.event.addListener(markerSams, 'click', function() {
+    infowindow1.open(map,markerSams);
     });
 
-    //google.maps.event.addDomListener(window, 'load', initialize);
 
-    infowindow.close(map,marker);
-
-    // Marker/Info for Boiler House
+    // Marker/Infowindow for Boiler House
     var boilerHouse = { lat: 29.442794, lng: -98.480566};
 
-    marker = new google.maps.Marker({
+    var markerBoiler = new google.maps.Marker({
       "position": boilerHouse,
-      "map": map
+      "map": map,
+      "icon": image1
     });
 
-     infowindow = new google.maps.InfoWindow({
+     var infowindow2 = new google.maps.InfoWindow({
         content: 'Because STEAK!'  
     });
 
-    google.maps.event.addListener(marker, 'click', function() {
-    infowindow.open(map,marker);
+    // Click Event for Boiler House Window
+    google.maps.event.addListener(markerBoiler, 'click', function() {
+    infowindow2.open(map,markerBoiler);
     });
 
-    //google.maps.event.addDomListener(window, 'load', initialize);
-
-    infowindow.close(map,marker);
-
-    // Marker/Info for Bakery Lorraine
+    
+    // Marker/Infowindow for Bakery Lorraine
     var bakeryLorraine = { lat: 29.442112, lng: -98.480041};
 
-    marker = new google.maps.Marker({
+    var markerBakery = new google.maps.Marker({
       "position": bakeryLorraine,
-      "map": map
+      "map": map,
+      "icon": image1
     });
 
-    infowindow = new google.maps.InfoWindow({
+    var infowindow3 = new google.maps.InfoWindow({
         content: 'Part of a Balanced Breakfast!'  
     });
 
-    google.maps.event.addListener(marker, 'click', function() {
-    infowindow.open(map,marker);
+    // Click Event for Bakery Window
+    google.maps.event.addListener(markerBakery, 'click', function() {
+    infowindow3.open(map,markerBakery);
     });
 
-    infowindow.close(map,marker);
 
-    // Marker/Info for Local Coffee
+    // Marker/Infowindow for Local Coffee
     var localCoffee = { lat: 29.441916, lng: -98.479424};
 
-    marker = new google.maps.Marker({
+    var markerLocal = new google.maps.Marker({
       "position": localCoffee,
-      "map": map
+      "map": map,
+      "icon": image1
     });
 
-    infowindow = new google.maps.InfoWindow({
+    var infowindow4 = new google.maps.InfoWindow({
         content: 'Java is Life!'  
     });
-    google.maps.event.addListener(marker, 'click', function() {
-    infowindow.open(map,marker);
+
+    // Click Event for Local Window
+    google.maps.event.addListener(markerLocal, 'click', function() {
+    infowindow4.open(map,markerLocal);
     });
 
-    infowindow.close(map,marker);
 
-    // Marker/Info for Bike World
+    // Marker/Infowindow for Bike World
     var bikeWorld = { lat: 29.443269, lng: -98.478643};
 
-    marker = new google.maps.Marker({
+    var markerBike = new google.maps.Marker({
       "position": bikeWorld,
-      "map": map
+      "map": map,
+      "icon": image2
     });
 
-    infowindow = new google.maps.InfoWindow({
+    var infowindow5 = new google.maps.InfoWindow({
         content: 'I Work here, and We Have Snacks!'  
     });
-    //google.maps.event.addListener(marker, 'click', function() {
-    //infowindow.open(map,marker);
-    //});
 
-    infowindow.close(map,marker);
-    
-    //google.maps.event.addDomListener(window, 'load', initialize);
+    // Click Event for Bike World Window 
+    google.maps.event.addListener(markerBike, 'click', function() {
+    infowindow5.open(map,markerBike);
+    });
+
 
    </script>
 </body>  
