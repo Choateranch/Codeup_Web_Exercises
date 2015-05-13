@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JQuery</title>
+    <script src="/js/jquery.js"></script>
+    <script type="text/javascript"></script> 
+      <script>
+       
+       $(document).ready(function() {
+       alert( 'The DOM has finished loading!' );
+        
+        var content = $('.codeup').css('background-color', 'red');
+        	                      
+
+        var heading = $("h2").css('font-size', '50px');
+
+        var words = $("p").css('font-size', '30px')
+                              .css('color', 'purple');
+
+        //var all = $("*").css('border', '3px solid green'); 
+        
+       $('p').hover(
+        function() {
+            $(this).css('background-color', '#FF0');
+        },
+        function() {
+            $(this).css('background-color', '#FFF');
+        }
+    );
+
+       });
+
+     </script>
+</head>
+  <body>
+      <h1 class= 'codeup'> JQUERY RULES</h1>
+
+        <p id= "paragraph">
+        	The purpose of the paragraph is to help us understand and use JQuery like a BOSS! Don't screw this one up cause it looks like Fun. Sucka!!!
+        </p>
+
+      <h2 class="codeup"> PHOTO BOMB </h2>
+
+      <img class="codeup" src="/img/jquery_rocks.jpg">
+
+     
+  </body>
+</html>
