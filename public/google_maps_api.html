@@ -3,12 +3,17 @@
 <head>
   <title> Google API </title>
   <style type="text/css">
+    body{
+     background: #559ea5;
+     position: absolute;
+   }
     #map-canvas {
      width: 900px;
      height: 600px;
+     float: center;
    }
    body{
-    background: grey;
+    background: #559ea5;
    }
 
  </style> 
@@ -44,7 +49,7 @@
         content: 'Burgers and Beers!'  
     });
 
-    // Click Event for Sams Window
+    // Click Event for Sams Windowc
     google.maps.event.addListener(markerSams, 'click', function() {
     infowindow1.open(map,markerSams);
     });
