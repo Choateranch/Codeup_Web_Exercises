@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Faq Page</title>
+    <link rel="stylesheet" href="/css/jquery_faq.css">
+     <script src="/js/jquery.js"></script>
+     <script type="text/javascript"></script> 
+      <script>
+       // let's answers appear/disappear
+
+       $(document).ready(function() {
+
+       	$('dt').click(function(event){
+       		event.preventDefault();
+        $('dd').toggleClass('invisible');
+
+}); 
+});    // let's facts appear/disappear
+
+       $(document).ready(function() {
+
+        $('h3').click(function(event){
+       		event.preventDefault();
+        $('ul').toggleClass('invisible');
+
+});
+      // mkas font weight Bold  
+      $('ul').each(function(index,element) {
+    
+        $(this).children().first().css('font-weight', 'bold');
+    });
+});
+
+      
+     </script> 
+</head>
+<body>
+  <h1>10 Most Asked Questions at National Parks</h1> 	
+    <dl>
+        <dt>Q-1</dt>
+         <dd class='invisible'>A-1</dd>
+
+        <dt>Q-2</dt>
+         <dd class='invisible'>A-2</dd>
+
+        <dt>Q-3</dt>
+         <dd class='invisible'>A-3</dd>
+
+        <dt>Q-4</dt>
+         <dd class='invisible'>A-4</dd>
+
+        <dt>Q-5</dt>
+         <dd class='invisible'>A-5</dd>
+
+        <dt>Q-6</dt>
+         <dd class='invisible'>A-6</dd>
+
+         <dt>Q-7</dt>
+        <dd class= 'invisible'>A-7</dd>
+
+         <dt>Q-8</dt>
+        <dd class= 'invisible'>A-8</dd>
+
+         <dt>Q-9</dt>
+        <dd class= 'invisible'>A-9</dd>
+
+         <dt>Q-10</dt>
+        <dd class= 'invisible'>A-10</dd>
+    </dl>
+
+ <h3>Yosemite</h3> 
+   <ul class='invisible'>
+   	<li>It's a Great Big Ol' Park</li>
+   	<li>There's a Lake There</li>
+   	<li>It's were the Buffalo Roam</li>
+   	<li>Pretty Sure there is a Mountain or Two</li>
+   </ul> 
+
+ <h3>The Badlands</h3>
+   <ul class='invisible'>
+    <li>It May or May Not be in New Mexico</li>
+    <li>Called the Badlands Because it beat up Goodlands</li>
+    <li>Once was used as a Playground for Elk and Bear</li>
+    <li>Was founded by Little Bo Peep</li>
+   </ul> 
+
+ <h3>The Everglades</h3>
+   <ul class='invisible'>
+    <li>It's Where Glade Plugins come from</li> 
+    <li>Many Alligators Live There</li>
+    <li>Holds the Record for the Only National Park Named EVERGLADES</li>
+    <li>Mostly Contains Mud and Water</li>
+   </ul> 
+
+
+
+</body>
+</html>
